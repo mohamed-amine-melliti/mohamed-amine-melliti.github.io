@@ -1,0 +1,64 @@
+// Typography
+
+
+$base-font-family: 'Fredoka One', sans-serif ;
+
+// Colors
+$dark-black: #121212;
+$base-black: #030301;
+$white: #fff;
+$grey: #777;
+$light-grey: #BCBFC1;
+$dark-grey: #373739;
+$extra-dark-grey: #1E1E1E;
+$orange: #F44336;
+
+// Font sizes
+$main-header-font-size: 48px;
+$main-header-font-size-large: 65px;
+$header-font-size: 40px;
+$secondary-header-font-size: 36px;
+$extra-medium-font-size: 32px;
+$medium-font-size: 28px;
+$extra-medium-base-font-size: 24px;
+$medium-base-font-size: 20px;
+$base-font-size: 18px;
+$small-base-font-size: 16px;
+$small-font-size: 14px;
+$tiny-font-size: 12px;
+$extra-tiny-font-size: 10px;
+
+$extra-large-letter-font-size: 288px;
+$large-letter-font-size: 90px;
+$medium-letter-font-size: 60px;
+
+// Sizes
+$home-block-height: calc(100vh - 250px);
+
+// Other Sizes
+$base-spacing: 0.01em;
+
+// Mixins
+@mixin overflow-y-scroll() {
+  padding-right: 10px;
+
+  /*Chrome*/
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $dark-black;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $orange;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $orange;
+  }
+}

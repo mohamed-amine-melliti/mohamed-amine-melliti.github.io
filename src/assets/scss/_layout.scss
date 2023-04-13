@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $base-font-family;
+
+  background-color: $base-black;
+  color: $grey;
+  font-size: $small-base-font-size;
+  letter-spacing: $base-spacing;
+  overflow-x: hidden;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+a {
+  color: $orange;
+  text-decoration: none;
+  transition: color 1.5s ease;
+
+  &:hover {
+    color: $white;
+  }
+
+  &:focus {
+    outline: 1px solid $dark-grey;
+  }
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

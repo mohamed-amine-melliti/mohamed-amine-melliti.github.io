@@ -1,0 +1,515 @@
+// Colors
+.orange-color {
+  color: $orange;
+}
+
+.light-grey-color {
+  color: $light-grey;
+}
+
+.white-color {
+  color: $white;
+}
+
+.grey-color-link {
+  color: $grey;
+  transition: color .2s ease-in-out;
+
+  &:hover {
+    color: $orange;
+    text-decoration: none;
+  }
+}
+
+.white-color-link {
+  color: $white;
+
+  &:hover {
+    color: $orange;
+    text-decoration: none;
+  }
+}
+
+// Typography
+.tiny-font-size {
+  font-size: $tiny-font-size;
+}
+
+// General
+.scrollmagic-pin-spacer {
+  height: 100vh !important;
+  margin-bottom: 100px !important;
+}
+
+.section {
+  background: $base-black;
+  min-height: 90vh;
+  height: 100%;
+}
+
+.section-container {
+  position: relative;
+  z-index: 1;
+}
+
+// Elements
+.heading {
+  color: $white;
+  font-weight: bold;
+  letter-spacing: $base-spacing;
+  margin-bottom: 30px;
+  font-size: $header-font-size;
+
+  &-main {
+    font-size: $main-header-font-size;
+    margin-bottom: 25px;
+  }
+}
+
+.description {
+  color: $white;
+  font-weight: 500;
+  font-size: $medium-font-size;
+  letter-spacing: $base-spacing;
+  margin-bottom: 30px;
+
+  &-dark {
+    color: $dark-black;
+  }
+
+  p {
+    margin-bottom: 28px;
+  }
+
+  a:hover {
+    color: $orange;
+    text-decoration: underline;
+  }
+}
+
+.horizontal-grey-link {
+  color: $grey;
+
+  > span:first-child {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    line-height: 20px;
+    margin-right: 10px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 60px;
+      background: $grey;
+      height: 2px;
+      vertical-align: middle;
+      animation: line-drop-horizontal infinite 2s cubic-bezier(0.8, 0, 0.4, 1);
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+    }
+  }
+
+  &:hover {
+    color: $orange;
+    text-decoration: none;
+
+    &:before {
+      width: 70px;
+      height: 2px;
+      background: $orange;
+    }
+  }
+}
+
+// Animations
+.strike span {
+  transition: color .5s
+}
+
+.strike:hover span {
+  color: $white;
+}
+
+.strike span {
+  position: relative;
+  line-height: 1
+}
+
+.strike span::before, .strike span::after {
+  content: '';
+  background: $white;
+  position: absolute;
+  top: 50%;
+  display: block;
+  height: 2px;
+  width: 0
+}
+
+.strike span::before {
+  left: 0
+}
+
+.strike span::after {
+  right: 0;
+  transition: width 2s cubic-bezier(0.22, 0.61, 0.36, 1)
+}
+
+.strike:hover span::before {
+  width: 100%;
+  transition: width 1.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+}
+
+.strike:hover span::after {
+  width: 100%;
+  background: transparent;
+  transition: 0s
+}
+
+@keyframes mail-arrow-svg {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(180deg)}
+}
+
+@keyframes line-drop {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes line-drop-horizontal {
+  0% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes line-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(400%);
+  }
+  60% {
+    transform: translateX(400%);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes RocketShuffle {
+  0% {
+    transform: rotate(0)
+  }
+
+  25% {
+    transform: rotate(-8deg)
+  }
+
+  75% {
+    transform: rotate(8deg)
+  }
+
+  100% {
+    transform: rotate(0)
+  }
+}
+
+/*About*/
+.bio-container {
+  p {
+    margin-bottom: 28px;
+  }
+
+  .heading-container p {
+    margin-bottom: 0;
+  }
+}
+
+/* Contacts */
+.contacts {
+  .mail-text {
+    svg {
+      transition: all 1s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        animation: mail-arrow-svg .5s;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .mail-block.animation {
+    .mail-text {
+      svg {
+        animation: mail-arrow-svg .5s;
+        transform: rotate(180deg);
+      }
+
+      &:hover {
+        svg {
+          animation: mail-arrow-svg .5s;
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}
+
+/* Swiper slider */
+.swiper-button-prev,
+.swiper-button-next {
+  background: $white;
+  top: 94%;
+  width: 50px;
+  height: 50px;
+
+  > svg {
+    position: relative;
+    transition: all .4s ease-out;
+  }
+}
+
+.swiper-button-prev {
+  left: 3px;
+}
+
+.swiper-button-next {
+  right: 3px;
+  transform: rotate(-180deg);
+}
+
+.swiper-container-horizontal > .swiper-pagination-progressbar {
+  width: 30%;
+  height: 2px;
+  top: 94%;
+  background: $dark-grey;
+  left: 35%;
+
+  &:before {
+    content: attr(data-before);
+    width: 0;
+    position: absolute;
+    left: -30px;
+    top: -10px;
+  }
+
+  &:after {
+    content: attr(data-after);
+    position: absolute;
+    width: 0;
+    right: -10px;
+    top: -10px;
+  }
+
+  > .swiper-pagination-progressbar-fill {
+    background: $orange;
+  }
+}
+
+.cases .swiper-slide {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+  background-color: transparent !important;
+  justify-content: space-around !important;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+// not working for non-hover devices
+@media (any-hover: hover) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    &:hover {
+      box-shadow: 0 0 0 3px $orange;
+
+      > svg {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    left: 3px !important;
+  }
+
+  .swiper-button-next {
+    right: 3px !important;
+  }
+}
+
+// Responsive
+@include media-min-width($lg-max) {
+  #header {
+    .container {
+      max-width: 95%;
+    }
+  }
+
+  .container.footer-container, .container.custom-container {
+    max-width: 95%;
+  }
+}
+
+@include media-min-width ('1400px') {
+  .container {
+    max-width: 1200px;
+  }
+
+  #header {
+    .container {
+      max-width: 90%;
+    }
+  }
+
+  .container.footer-container, .container.custom-container {
+    max-width: 90%;
+  }
+}
+
+@include media-max-width($lg-max) {
+  .description {
+    font-size: 20px;
+  }
+
+  .contacts {
+    .mail-text {
+      svg {
+        width: 45px;
+      }
+    }
+  }
+}
+
+@include media-max-width($md-max) {
+  .heading {
+    font-size: 50px;
+    line-height: 70px;
+    padding-bottom: 20px;
+
+    &-main {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  .description {
+    font-size: 25px;
+  }
+
+  .cases .swiper-slide {
+    height: 100%;
+  }
+
+  .clients .swiper-slide {
+    height: 100%;
+  }
+
+  .services .swiper-slide {
+    height: calc(100vh - 285px);
+    min-height: 450px;
+  }
+}
+
+@include media-max-width($sm-max) {
+  .heading {
+    font-size: $medium-font-size;
+    line-height: 40px;
+    margin-bottom: 20px;
+
+    &-main {
+      font-size: $secondary-header-font-size;
+    }
+  }
+
+  .cases .swiper-slide {
+    padding-bottom: 0;
+  }
+
+  .section-container {
+    padding-top: 60px;
+  }
+
+  .description {
+    font-size: $base-font-size;
+  }
+
+  /*Cases slider*/
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}
+
+@include media-max-width($menu-breakpoint) {
+  .horizontal-grey-link {
+    &:before {
+      width: 30px;
+    }
+
+    &:hover {
+      &:before {
+        width: 40px;
+      }
+    }
+  }
+}
+
+@include media-max-width($xs-max) {
+  .partners .swiper-slide {
+    height: 700px;
+  }
+}
+
+@include media-max-width($mobile-sm) {
+  .description {
+    font-size: $small-font-size;
+  }
+}
+
+@include media-max-width($mobile-xs) {
+  /*Slider slider*/
+  //.swiper-button-prev {
+  //  left: 10px;
+  //}
+  //
+  //.swiper-button-next {
+  //  right: 10px;
+  //}
+}
+
+@media only screen and (max-height: 980px) {
+  .cases .swiper-slide {
+    min-height: 500px;
+  }
+}
