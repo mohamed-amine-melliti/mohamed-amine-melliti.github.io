@@ -9,7 +9,6 @@ import router from './router';
 import utils from './mixins/utils';
 import store from './store';
 import {i18n} from './i18n';
-import VueSwing from 'vue-swing';
 
 
 import App from './App.vue';
@@ -21,7 +20,6 @@ Vue.use(VueLazyload, {
 Vue.use(VueResource);
 Vue.use(Navbar);
 Vue.use(VueAwesomeSwiper);
-Vue.component('vue-swing', VueSwing);
 Vue.mixin(utils);
 
 Vue.http.options.root = 'https://hopeandpart.com/wp-json/';
