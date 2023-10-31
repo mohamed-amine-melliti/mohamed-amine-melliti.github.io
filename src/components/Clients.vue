@@ -59,7 +59,10 @@ export default {
       newImageClient1: "src/assets/img/esprit.png",
       newImageClient2: "src/assets/img/d.jpg",
       newImageClient3: "src/assets/img/horizon-data.png",
+<<<<<<< HEAD
       newImageClient4: "src/assets/img/terrakodo.jpg",
+=======
+>>>>>>> e6769284ed48b0f358a673ac544e7fa361d88cdf
 
       clients: [],
       clientsData: [],
