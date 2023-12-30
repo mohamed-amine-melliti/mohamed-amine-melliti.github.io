@@ -3,6 +3,7 @@ import 'babel-polyfill';
 import Vue from 'vue';
 import VueLazyload from 'vue-lazyload';
 import VueResource from 'vue-resource';
+import Spline from 'vue-spline';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import {Navbar} from 'bootstrap-vue/es/components';
 import router from './router';
@@ -20,6 +21,7 @@ Vue.use(VueLazyload, {
 Vue.use(VueResource);
 Vue.use(Navbar);
 Vue.use(VueAwesomeSwiper);
+Vue.use(Spline)
 Vue.mixin(utils);
 
 Vue.http.options.root = 'https://hopeandpart.com/wp-json/';

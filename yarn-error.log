@@ -1,0 +1,96 @@
+Arguments: 
+  /Users/aminemelliti/.nvm/versions/node/v16.20.2/bin/node /opt/homebrew/bin/yarn add vue bootstrap bootstrap-vue
+
+PATH: 
+  /Users/aminemelliti/.nvm/versions/node/v16.20.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/aminemelliti/.nvm/versions/node/v16.20.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.20.2
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/Users/aminemelliti/Desktop/mohamed-amine-melliti.github.io/node_modules/@vue/server-renderer'
+
+npm manifest: 
+  {
+    "name": "portofolio-mohamed-amine",
+    "author": "Amine",
+    "scripts": {
+      "deploy": "gh-pages -d deploy",
+      "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
+      "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    },
+    "dependencies": {
+      "@fontsource/fredoka-one": "^4.5.9",
+      "animejs": "^3.0.0",
+      "babel-plugin-syntax-jsx": "^6.18.0",
+      "babel-plugin-transform-runtime": "^6.23.0",
+      "babel-plugin-transform-vue-jsx": "^3.7.0",
+      "babel-preset-stage-2": "^6.24.1",
+      "bootstrap": "^4.1.3",
+      "bootstrap-vue": "^2.23.1",
+      "gsap": "^2.0.2",
+      "imports-loader": "^0.8.0",
+      "jquery": "^3.3.1",
+      "lodash": "^4.17.21",
+      "normalize.css": "^8.0.1",
+      "scrollmagic": "^2.0.6",
+      "smart-timeout": "^2.0.3",
+      "style-loader": "^0.23.1",
+      "svg-inline-loader": "^0.8.0",
+      "three": "^0.160.0",
+      "tokenizer": "^1.1.2",
+      "url-loader": "^1.1.2",
+      "vue": "^2.5.9",
+      "vue-3d-loader": "^2.1.5",
+      "vue-awesome-swiper": "^3.1.3",
+      "vue-i18n": "^8.8.2",
+      "vue-lazyload": "^1.2.6",
+      "vue-resource": "^1.5.1",
+      "vue-router": "^3.0.1",
+      "vue-spline": "0.0.4",
+      "vuex": "^3.0.1"
+    },
+    "keywords": [
+      "vue",
+      "wordpress",
+      "REST",
+      "API"
+    ],
+    "devDependencies": {
+      "babel-core": "^6.26.0",
+      "babel-loader": "^7.1.2",
+      "babel-polyfill": "^6.26.0",
+      "babel-preset-env": "^1.7.0",
+      "copy-webpack-plugin": "^4.6.0",
+      "cross-env": "^3.0.0",
+      "css-loader": "^0.25.0",
+      "file-loader": "^0.9.0",
+      "html-webpack-plugin": "^3.2.0",
+      "image-webpack-loader": "^4.6.0",
+      "imagemin-webpack-plugin": "^2.4.0",
+      "node-sass": "^8.0.0",
+      "sass-loader": "^5.0.1",
+      "sass-resources-loader": "^1.3.1",
+      "vue-loader": "^11.1.4",
+      "vue-template-compiler": "^2.2.1",
+      "webpack": "^2.2.0",
+      "webpack-bundle-analyzer": "^3.0.3",
+      "webpack-dev-server": "^2.2.0"
+    },
+    "main": "src/main.js",
+    "repository": {
+      "type": "git"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
